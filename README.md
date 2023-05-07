@@ -31,7 +31,7 @@ The neural network architecture for the regression is 3 layers that take 1 dimen
   <img src="https://github.com/hhuynh000/EE399_HW4/blob/main/resources/reg_nn.png" width="500">
 </p>
 <p align="center">
-  Figure 3. Function $f(x) = A\cos{(Bx)}+Cx+D$ noisy data points
+  Figure 3. Regression Neural Network
 </p>
 
 The neural network architecture for the classification is 3 layers that take a flat 748 dimensional input (image) that goes through a layer with 128 nodes, then another layer of 64 nodes then output a 10 dimensional vector representing the probabilities guess for al 10 digits. The neural network classification will then be the index corresponding to largest value in the output vector. The loss function used is cross entropy and optimizer used is Adam with a learning rate of 0.0005 and 30 epochs of training. The nerual network code is shown in the figure below.
@@ -40,7 +40,7 @@ The neural network architecture for the classification is 3 layers that take a f
   <img src="https://github.com/hhuynh000/EE399_HW4/blob/main/resources/class_nn.png" width="500">
 </p>
 <p align="center">
-  Figure 4. Function $f(x) = A\cos{(Bx)}+Cx+D$ noisy data points
+  Figure 4. Classification Neural Network
 </p>
 
 ## Result
