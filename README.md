@@ -27,7 +27,6 @@ Neural network are essentially linear mapping between each layers, but with non-
 ## Implementation
 The neural network architecture for the regression is 3 layers that take 1 dimensional input x and expand to 2 layers with 64 nodes and output a 1 dimensional vector y. The loss function used is mean squared error and optimizer used is Adam with a learning rate of 0.0005 and 100 epochs of training. The nerual network code is shown in the figure below.
 
-The data points used in regression task is shown in the figure below.
 <p align="center">
   <img src="https://github.com/hhuynh000/EE399_HW4/blob/main/resources/reg_nn.png" width="500">
 </p>
@@ -37,9 +36,8 @@ The data points used in regression task is shown in the figure below.
 
 The neural network architecture for the classification is 3 layers that take a flat 748 dimensional input (image) that goes through a layer with 128 nodes, then another layer of 64 nodes then output a 10 dimensional vector representing the probabilities guess for al 10 digits. The neural network classification will then be the index corresponding to largest value in the output vector. The loss function used is cross entropy and optimizer used is Adam with a learning rate of 0.0005 and 30 epochs of training. The nerual network code is shown in the figure below.
 
-The data points used in regression task is shown in the figure below.
 <p align="center">
-  <img src="https://github.com/hhuynh000/EE399_HW4/blob/main/resources/reg_data.png" width="500">
+  <img src="https://github.com/hhuynh000/EE399_HW4/blob/main/resources/class_nn.png" width="500">
 </p>
 <p align="center">
   Figure 4. Function $f(x) = A\cos{(Bx)}+Cx+D$ noisy data points
@@ -71,7 +69,7 @@ When the first 10 and last 10 data points is used for training and the remaining
   Figure 7. Neural Network Regression
 </p>
 
-In comparision to least square regression, the prediction from the neural network most closely similar to fitting the data with a linear model using least square. The resulting prediction from the neural network seem to try to fit a linear line to the data. Similar to least square regression, using the first and last 10 data points significantly increase the model ability to predict the overall data points.
+In comparision to least square regression, the prediction from the neural network most closely similar to fitting the data with a linear model using least square. The resulting prediction from the neural network seem to try to fit a linear line to the data. Similar to least square regression, using the first and last 10 data points significantly increase the model ability to predict the overall data points. For more information on least square regression refer to this [Github page](https://github.com/hhuynh000/EE399_HW1 " Least Squares problem").
 
 ### Classification
 The MNIST data set are 28x28 pixel images of handwritten digits. Some example of the images are shown in the figure below.
@@ -90,4 +88,7 @@ Performing PCA to get the first 20 principal components to show potential featur
   Figure 9. MNIST PCA
 </p>
 
-After training the classification neural network described above, the model accuracy on the testing data is 97%.
+After training the classification neural network described above, the model accuracy on the 10000 testing images is 97%. In comparison with LDA, SVM and Decision Tree their accuracy are 87.3%, 97.8% and 83.7% respectively. The performance of the neural network is comparable to SVM. For more information on the implementation of LDA, SVM and Decision Tree refer to this [Github page](https://github.com/hhuynh000/EE399_HW3 "Classical Machine Learning Classification Methods").
+
+## Conclusion
+Feed foward neural network classification performance is comparable to traditional approach like SVM. However, for tasks with limited data points like the regression task above, the neural network does not perform as well as simple least square regression. Since neural network has a lot of parameters, it requires tons of data to train. Therefore, for tasks with limited data sample traditional machine learning methods might yield better performance.
